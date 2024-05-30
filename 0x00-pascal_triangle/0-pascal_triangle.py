@@ -37,11 +37,12 @@ def pascal_triangle(n):
     if n == 0:
         return trianle
     elif n == 1:
-        return trianle.append(tmp)
+        trianle.append(tmp)
+        return trianle
 
     trianle.append(tmp)
     i = 2
-    for i in range(n):
+    for i in range(n - 1):
         tmp = row(tmp)
         trianle.append(tmp)
 
