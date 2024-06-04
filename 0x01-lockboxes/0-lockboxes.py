@@ -1,6 +1,17 @@
 #!/usr/bin/python3
+"""_summary_
+    """
+
 
 def canUnlockAll(boxes):
+    """_summary_
+
+    Args:
+        boxes (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     if len(boxes) == 1:
         return True
 
