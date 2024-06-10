@@ -17,18 +17,23 @@ Number of operations: 6
 
 
 def minOperations(n: int) -> int:
-    if n <= 0:
+    if n <= 1 or type(n) != int:
         return 0
-    elif n == 1:
-        return 1
 
     counter = 2
+    copy = "H"
     string = "HH"
-    string1 = "HH"
-    if n % 2 != 0:
-        string += 'H'
-        counter += 1
-    while len(string1) != n:
-        counter += 2
-        string1 += string
+    flag = 0
+    while len(string) != n:
+        if n % len(string) == 0:
+            copy = string
+            string += copy
+            counter += 2
+            flag = 1
+        elif flag == 1:
+            string += copy
+            counter += 1
+        else:
+            string = string + copy
+            counter += 1
     return counter
