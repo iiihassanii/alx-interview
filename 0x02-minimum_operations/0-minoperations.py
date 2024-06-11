@@ -22,14 +22,7 @@ Number of operations: 6
 
 
 def minOperations(n: int) -> int:
-    """_summary_
-
-    Args:
-        n (int): _description_
-
-    Returns:
-        int: _description_
-    """
+    """_summary_"""
     if n <= 1 or type(n) is not int:
         return 0
 
